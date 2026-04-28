@@ -1,0 +1,141 @@
+---
+interface Props {
+  name: string;
+  description: string;
+  url?: string;
+  image?: string;
+}
+
+const { name, description, url, image } = Astro.props;
+const Tag = url ? "a" : "div";
+---
+
+<Tag
+  {...(url
+    ? { href: `https://${url}`, target: "_blank", rel: "noopener noreferrer" }
+    : {})}
+  class="project"
+>
+  {
+    image && (
+      <div class="project-image">
+        <img src={image} alt={name} loading="lazy" />
+      </div>
+    )
+  }
+  <div class="project-body">
+    <h3 class="project-name">{name}</h3>
+    <p class="project-desc">{description}</p>
+    {url && (
+      <span class="project-link">
+        {url} <span class="arrow">&rarr;</span>
+      </span>
+    )}
+  </div>
+</Tag>
+
+<style>
+  .project {
+    position: relative;
+    display: grid;
+    grid-template-columns: 50% 1fr;
+    border-radius: var(--radius);
+    color: var(--text);
+    overflow: hidden;
+    transition:
+      transform 0.3s ease,
+      border-color 0.3s ease,
+      box-shadow 0.3s ease;
+  }
+
+  .project:hover {
+    transform: translateY(-4px);
+    opacity: 1;
+  }
+
+  .project-image {
+    min-height: 200px;
+    overflow: hidden;
+    background: var(--bg);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: var(--radius);
+  }
+
+  .project-image img {
+    width: 75%;
+    height: auto;
+    object-fit: contain;
+    border-radius: var(--radius);
+    transition: transform 0.4s ease;
+  }
+
+  .project:hover .project-image img {
+    transform: scale(1.02);
+  }
+
+  .project-body {
+    display: flex;
+    flex-direction: column;
+    gap: 0.3rem;
+    justify-content: flex-start;
+  }
+
+  .project-name {
+    font-size: 1.3rem;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+  }
+
+  .project-desc {
+    color: var(--text-muted);
+    font-size: 0.9rem;
+    line-height: 1.5;
+  }
+
+  .project-link {
+    color: var(--accent);
+    font-size: 0.85rem;
+    margin-top: auto;
+    padding-top: 0.75rem;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+  }
+
+  .arrow {
+    display: inline-block;
+    transition: transform 0.2s ease;
+  }
+
+  .project:hover .arrow {
+    transform: translateX(4px);
+  }
+
+  @media (max-width: 768px) {
+    .project {
+      grid-template-columns: 1fr;
+    }
+
+    .project-image {
+      min-height: 160px;
+      border-right: none;
+      padding: 0 1.5rem;
+    }
+
+    .project-image img {
+      width: 100%;
+    }
+
+    .project-body {
+      padding: 1.5rem;
+      padding-top: 1rem;
+      padding-bottom: 0px;
+    }
+
+    .project-name {
+      font-size: 1.15rem;
+    }
+  }
+</style>

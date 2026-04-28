@@ -1,0 +1,947 @@
+---
+import Base from "../layouts/Base.astro";
+import Particles from "../components/Particles.astro";
+import ProjectCard from "../components/ProjectCard.astro";
+import ScrollReveal from "../components/ScrollReveal.astro";
+import HeroLogo from "../components/HeroLogo.astro";
+import HeroSmoke from "../components/HeroSmoke.astro";
+import ContactSmoke from "../components/ContactSmoke.astro";
+---
+
+<Base
+  title="Duke Electric | Bakersfield Electrician — 24/7 Emergency Repairs & Panel Upgrades"
+  description="Licensed Bakersfield electrician serving Kern County. 24/7 emergency electrical repairs, panel upgrades, GFCI and outlet repair, and code-compliant troubleshooting. CA License #1081132. Call (661) 343-5645."
+>
+  <Particles />
+  <ScrollReveal />
+
+  <main>
+    <!-- HERO -->
+    <section class="hero">
+      <HeroSmoke />
+      <div class="hero-glow"></div>
+      <div class="hero-content">
+        <HeroLogo />
+        <h1>Duke <span class="accent-gradient">Electric</span></h1>
+        <p class="tagline">
+          Panel Upgrades. <strong>Reliable Service.</strong>
+        </p>
+        <p class="tagline">
+          Fast Response. <strong>Emergency Repairs.</strong>
+        </p>
+        <p class="tagline">
+          <a href="tel:+16613435645" class="phone reveal reveal-delay-2 accent"
+            ><strong> (661) 343-5645 </strong></a
+          >
+          <span class="tagline-sub"> | Text or Call</span>
+        </p>
+      </div>
+      <div class="scroll-hint" aria-hidden="true">
+        <div class="scroll-line"></div>
+      </div>
+    </section>
+
+    <!-- SERVICES -->
+    <section class="services">
+      <div class="section-inner">
+        <h2 class="reveal">Capabilities</h2>
+        <div class="services-grid">
+          <div class="service-card reveal-from-left reveal-delay-1">
+            <div class="service-icon">
+              <svg
+                viewBox="0 0 24 24"
+                width="28"
+                height="28"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.5"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"
+                ></polygon>
+              </svg>
+            </div>
+            <h3>24/7 Emergency Service</h3>
+            <p>
+              Fast response when power is out, breakers fail, or anything unsafe
+              comes up.
+            </p>
+          </div>
+          <div class="service-card reveal-from-right reveal-delay-2">
+            <div class="service-icon">
+              <svg
+                viewBox="0 0 24 24"
+                width="28"
+                height="28"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.5"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <rect x="4" y="3" width="16" height="18" rx="1"></rect>
+                <line x1="8" y1="7" x2="16" y2="7"></line>
+                <line x1="8" y1="11" x2="16" y2="11"></line>
+                <line x1="8" y1="15" x2="16" y2="15"></line>
+                <line x1="8" y1="19" x2="13" y2="19"></line>
+              </svg>
+            </div>
+            <h3>Panel Upgrades & Repairs</h3>
+            <p>
+              Safe, code-compliant replacements and troubleshooting for
+              overloaded or outdated panels.
+            </p>
+          </div>
+          <div class="service-card reveal-from-left reveal-delay-3">
+            <div class="service-icon">
+              <svg
+                viewBox="0 0 24 24"
+                width="28"
+                height="28"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.5"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <path
+                  d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.121 2.121 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"
+                ></path>
+              </svg>
+            </div>
+            <h3>Electrical Troubleshooting</h3>
+            <p>
+              We find and fix the issue the right way - no guessing, no
+              shortcuts.
+            </p>
+          </div>
+          <div class="service-card reveal-from-right reveal-delay-4">
+            <div class="service-icon">
+              <svg
+                viewBox="0 0 24 24"
+                width="28"
+                height="28"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.5"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+                <path d="m9 12 2 2 4-4"></path>
+              </svg>
+            </div>
+            <h3>Clean, Professional Work</h3>
+            <p>
+              Respectful, honest service with clean installs and clear
+              communication.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- LICENSE BANNER -->
+    <section class="banner">
+      <div class="banner-glow nuget-glow-1"></div>
+      <div class="banner-glow nuget-glow-2"></div>
+      <div class="banner-glow nuget-glow-3"></div>
+      <div class="banner-content">
+        <p class="reveal-from-top">
+          License Number: <span class="accent">1081132</span>
+        </p>
+      </div>
+    </section>
+
+    <!-- RECENT WORK -->
+    <section class="work">
+      <div class="section-inner">
+        <h2 class="reveal">Recent Work</h2>
+        <div class="projects-list">
+          <div class="reveal">
+            <ProjectCard
+              name="GFCI Repair & Troubleshooting"
+              description="Safe, code-compliant fixes for tripping outlets and faulty circuits. We restore GFCI outlets to proper working condition, identify the real cause of trips and failures, and make sure the protection is back where it belongs."
+              image="/images/work/gfci.jpg"
+            />
+          </div>
+          <div class="reveal">
+            <ProjectCard
+              name="Accurate Electrical Diagnostics"
+              description="We test, measure, and find the problem before we fix it. Real-time load testing, advanced troubleshooting, and precision work — no guessing, no shortcuts."
+              image="/images/work/meter.jpg"
+            />
+          </div>
+          <div class="reveal">
+            <ProjectCard
+              name="Burnt Outlet Repair"
+              description="Overheated outlets can lead to fire. We diagnose the real cause — not just the visible damage — and replace damaged components with quality parts so your home stays safe."
+              image="/images/work/socket.jpg"
+            />
+          </div>
+          <div class="reveal">
+            <ProjectCard
+              name="Switch & Outlet Repairs"
+              description="Faulty switches and outlets fixed the right way. We replace worn or non-working components, find the real issue, and leave the work clean and code-compliant."
+              image="/images/work/switch.jpg"
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- DON'T LET THIS HAPPEN -->
+    <section class="warning">
+      <div class="section-inner">
+        <h2 class="reveal cta-red">Don't Let This Happen</h2>
+        <p class="warning-lead reveal reveal-delay-1">
+          If your outlet, panel, or junction box looks like this — call now.
+          Don't wait for the fire.
+        </p>
+        <div class="warning-grid">
+          <figure class="warning-tile reveal reveal-delay-1">
+            <video
+              src="/videos/smoking-power-strip.mp4"
+              poster="/images/work/smoking-power-strip-poster.jpg"
+              autoplay
+              loop
+              muted
+              playsinline
+              preload="metadata"
+              aria-label="A power strip overloaded with plugs, smoke pouring out"
+            ></video>
+            <figcaption>
+              Overloaded power strip — smoking and seconds from fire.
+            </figcaption>
+          </figure>
+          <figure class="warning-tile reveal reveal-delay-2">
+            <video
+              src="/videos/burning-plug.mp4"
+              poster="/images/work/burning-plug-poster.jpg"
+              autoplay
+              loop
+              muted
+              playsinline
+              preload="metadata"
+              aria-label="An electrical plug with a meter on fire"></video>
+            <figcaption>
+              Plug with meter, on fire. This is what failed wiring looks like.
+            </figcaption>
+          </figure>
+          <figure class="warning-tile reveal reveal-delay-3">
+            <video
+              src="/videos/smoking-junction-box.mp4"
+              poster="/images/work/smoking-junction-box-poster.jpg"
+              autoplay
+              loop
+              muted
+              playsinline
+              preload="metadata"
+              aria-label="A junction box with a socket and two plugs, smoke pouring out"
+            ></video>
+            <figcaption>
+              Smoking junction box. Don't reset the breaker — call us.
+            </figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <!-- CALL NOW BANNER -->
+    <section class="banner">
+      <div class="banner-glow nuget-glow-1"></div>
+      <div class="banner-glow nuget-glow-2"></div>
+      <div class="banner-glow nuget-glow-3"></div>
+      <div class="banner-content">
+        <p class="reveal-from-top">
+          Call Now: <a href="tel:+16613435645" style="color: red"
+            >(661) 343-5645</a
+          >
+        </p>
+      </div>
+    </section>
+
+    <!-- BEFORE / AFTER FEATURE -->
+    <section class="before-after">
+      <div class="section-inner">
+        <h2 class="reveal">Before &amp; After</h2>
+        <p class="section-lead reveal reveal-delay-1">
+          Real work. Real results. Code-compliant fixes done right.
+        </p>
+        <figure class="before-after-figure reveal reveal-delay-2">
+          <img
+            src="/images/work/panel.jpg"
+            alt="Before and after — repair of a faulty panel install by Duke Electric"
+            loading="lazy"
+          />
+        </figure>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <footer class="contact">
+      <ContactSmoke />
+      <div class="section-inner contact-inner">
+        <h2 class="reveal">Contact</h2>
+        <a
+          href="mailto:dukeelectric17@gmail.com"
+          class="email reveal reveal-delay-1">dukelectric17@gmail.com</a
+        >
+        <a
+          href="tel:+16613435645"
+          class="phone phone-block reveal reveal-delay-2">(661) 343-5645</a
+        >
+        <div class="social-links reveal reveal-delay-3">
+          <a
+            href="https://www.instagram.com/dukeselectricalcontracting/"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Instagram"
+          >
+            <svg
+              viewBox="0 0 24 24"
+              width="26"
+              height="26"
+              fill="currentColor"
+              aria-hidden="true"
+            >
+              <path
+                d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"
+              ></path>
+            </svg>
+          </a>
+        </div>
+      </div>
+    </footer>
+  </main>
+</Base>
+
+<style>
+  main {
+    position: relative;
+    z-index: 1;
+  }
+
+  .section-inner {
+    max-width: var(--max-width);
+    margin: 0 auto;
+    padding: 0 2rem;
+  }
+
+  h2 {
+    font-size: 1.1rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+    color: var(--accent);
+    margin-bottom: 3rem;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  h2::before {
+    content: "";
+    display: block;
+    width: 2rem;
+    height: 1px;
+    background: var(--accent);
+  }
+
+  /* ===== HERO ===== */
+  .hero {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    text-align: center;
+    overflow: hidden;
+  }
+
+  .hero-glow {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 900px;
+    height: 700px;
+    background: radial-gradient(
+      ellipse at center,
+      rgba(45, 212, 191, 0.1) 0%,
+      rgba(45, 212, 191, 0.03) 40%,
+      transparent 65%
+    );
+    pointer-events: none;
+    animation: glowPulse 6s ease-in-out infinite;
+  }
+
+  @keyframes glowPulse {
+    0%,
+    100% {
+      opacity: 0.7;
+      transform: translate(-50%, -50%) scale(1);
+    }
+    50% {
+      opacity: 1;
+      transform: translate(-50%, -50%) scale(1.08);
+    }
+  }
+
+  .hero-content {
+    position: relative;
+    z-index: 1;
+    width: 100%;
+  }
+
+  @keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translateY(40px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  .hero-content :global(.hero-logo) {
+    opacity: 0;
+    transform: translateY(40px);
+    animation: fadeInUp 1s ease-out 0s both;
+  }
+
+  h1 {
+    opacity: 0;
+    transform: translateY(40px);
+    animation: fadeInUp 1s ease-out 0.2s both;
+  }
+
+  .tagline {
+    opacity: 0;
+    transform: translateY(40px);
+    animation: fadeInUp 1s ease-out 0.4s both;
+  }
+
+  h1 {
+    font-size: 4.5rem;
+    font-weight: 800;
+    letter-spacing: -0.04em;
+    line-height: 1.1;
+    margin-top: 1.5rem;
+    margin-bottom: 1rem;
+    background: linear-gradient(
+      180deg,
+      #ffffff 20%,
+      rgba(255, 255, 255, 0.4) 100%
+    );
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .accent-gradient {
+    background: linear-gradient(
+      180deg,
+      var(--accent) 20%,
+      rgba(13, 61, 55, 0.2) 100%
+    );
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .accent {
+    background: var(--accent);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .tagline {
+    font-size: 1.25rem;
+    color: var(--text-muted);
+    font-weight: 400;
+    letter-spacing: 0.02em;
+  }
+
+  .tagline strong {
+    color: var(--text);
+    font-weight: 500;
+  }
+
+  .tagline-sub {
+    font-size: 1.5rem;
+    color: #fff;
+  }
+
+  .scroll-hint {
+    position: absolute;
+    bottom: 2rem;
+    transform: translateX(-50%);
+    left: 50%;
+  }
+
+  .scroll-line {
+    width: 1px;
+    height: 40px;
+    background: linear-gradient(180deg, var(--accent), transparent);
+    animation: scrollPulse 2s ease-in-out infinite;
+  }
+
+  @keyframes scrollPulse {
+    0%,
+    100% {
+      opacity: 0.3;
+    }
+    50% {
+      opacity: 0.7;
+    }
+  }
+
+  /* ===== SERVICES ===== */
+  .services {
+    padding: 8rem 0;
+  }
+
+  .services-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0;
+  }
+
+  .service-card {
+    padding: 2.5rem;
+    border-radius: var(--radius);
+    transition:
+      background 0.3s ease,
+      opacity 0.7s ease,
+      transform 0.7s cubic-bezier(0.2, 0.8, 0.4, 1);
+    cursor: default;
+  }
+
+  .service-card:hover {
+    background: rgba(45, 212, 191, 0.03);
+  }
+
+  .service-icon {
+    color: var(--accent);
+    margin-bottom: 1.25rem;
+    transition: transform 0.3s ease;
+  }
+
+  .service-card:hover .service-icon {
+    transform: translateY(-2px);
+  }
+
+  .service-card h3 {
+    font-size: 1.15rem;
+    font-weight: 700;
+    letter-spacing: -0.01em;
+    margin-bottom: 0.5rem;
+  }
+
+  .service-card p {
+    color: var(--text-muted);
+    font-size: 0.9rem;
+    line-height: 1.5;
+  }
+
+  /* ===== NUGET BANNER ===== */
+  .banner {
+    position: relative;
+    padding: 4rem 2rem;
+    text-align: center;
+    overflow: hidden;
+  }
+
+  .banner-glow {
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+  }
+
+  .nuget-glow-1 {
+    background: radial-gradient(
+      ellipse at center,
+      rgba(45, 212, 191, 0.05) 0%,
+      transparent 75%
+    );
+    animation:
+      glow1o 11s ease-in-out infinite,
+      glow1p 19s ease-in-out infinite;
+  }
+
+  .nuget-glow-2 {
+    background: radial-gradient(
+      ellipse at center,
+      rgba(20, 184, 166, 0.04) 0%,
+      transparent 70%
+    );
+    animation:
+      glow2o 17s ease-in-out infinite,
+      glow2p 13s ease-in-out infinite;
+  }
+
+  .nuget-glow-3 {
+    background: radial-gradient(
+      ellipse at center,
+      rgba(94, 234, 212, 0.035) 0%,
+      transparent 65%
+    );
+    animation:
+      glow3o 23s ease-in-out infinite,
+      glow3p 29s ease-in-out infinite;
+  }
+
+  @keyframes glow1o {
+    0%,
+    100% {
+      opacity: 0.6;
+    }
+    38% {
+      opacity: 1;
+    }
+    71% {
+      opacity: 0.75;
+    }
+  }
+  @keyframes glow1p {
+    0%,
+    100% {
+      transform: translate(-3%, 1%);
+    }
+    41% {
+      transform: translate(4%, -2%);
+    }
+    78% {
+      transform: translate(-1%, 3%);
+    }
+  }
+
+  @keyframes glow2o {
+    0%,
+    100% {
+      opacity: 1;
+    }
+    29% {
+      opacity: 0.5;
+    }
+    63% {
+      opacity: 0.85;
+    }
+  }
+  @keyframes glow2p {
+    0%,
+    100% {
+      transform: translate(3%, -1%);
+    }
+    35% {
+      transform: translate(-4%, 2%);
+    }
+    67% {
+      transform: translate(2%, -3%);
+    }
+  }
+
+  @keyframes glow3o {
+    0%,
+    100% {
+      opacity: 0.7;
+    }
+    44% {
+      opacity: 1;
+    }
+    77% {
+      opacity: 0.4;
+    }
+  }
+  @keyframes glow3p {
+    0%,
+    100% {
+      transform: translate(1%, 2%);
+    }
+    52% {
+      transform: translate(-3%, -1%);
+    }
+    83% {
+      transform: translate(2%, -2%);
+    }
+  }
+
+  .banner-content {
+    position: relative;
+    z-index: 2;
+  }
+
+  .banner p {
+    font-size: 2rem;
+    font-weight: 600;
+    letter-spacing: -0.01em;
+    margin-bottom: 0.75rem;
+  }
+
+  .banner a {
+    display: inline-block;
+    transition:
+      filter 0.3s ease,
+      transform 0.3s ease;
+  }
+
+  .banner a:hover {
+    opacity: 1;
+    transform: scale(1.05);
+    filter: drop-shadow(0 0 20px rgba(45, 212, 191, 0.3));
+  }
+
+  /* ===== WORK ===== */
+  /* ===== BEFORE / AFTER ===== */
+  .before-after {
+    padding: 8rem 0;
+  }
+
+  .section-lead {
+    color: var(--text);
+    font-size: 1.15rem;
+    line-height: 1.5;
+    margin: -1rem auto 3rem;
+    max-width: 720px;
+    text-align: center;
+  }
+
+  .before-after-figure {
+    margin: 0;
+    border-radius: var(--radius);
+    overflow: hidden;
+    border: 1px solid var(--border-subtle);
+    background: var(--bg-elevated);
+    transition:
+      border-color 0.3s ease,
+      box-shadow 0.3s ease;
+  }
+
+  .before-after-figure:hover {
+    border-color: var(--border-hover);
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.4);
+  }
+
+  .before-after-figure img {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+
+  /* ===== RECENT WORK ===== */
+  .work {
+    padding: 8rem 0;
+  }
+
+  .projects-list {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+  }
+
+  /* ===== DON'T LET THIS HAPPEN ===== */
+  .warning {
+    padding: 8rem 0;
+    text-align: center;
+  }
+
+  .warning-lead {
+    color: var(--text);
+    font-size: 1.15rem;
+    max-width: 720px;
+    margin: -1rem auto 3rem;
+    line-height: 1.5;
+  }
+
+  .warning-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+  }
+
+  .warning-tile {
+    margin: 0;
+    border-radius: var(--radius);
+    overflow: hidden;
+    border: 1px solid var(--border-subtle);
+    background: var(--bg-elevated);
+    transition:
+      border-color 0.3s ease,
+      box-shadow 0.3s ease;
+  }
+
+  .warning-tile:hover {
+    border-color: var(--border-hover);
+    box-shadow: 0 16px 40px rgba(0, 0, 0, 0.4);
+  }
+
+  .warning-tile video {
+    width: 100%;
+    aspect-ratio: 4 / 5;
+    object-fit: cover;
+    display: block;
+    background: #000;
+  }
+
+  .warning-tile figcaption {
+    padding: 1.25rem 1.25rem 1.5rem;
+    font-size: 0.9rem;
+    color: var(--text-muted);
+    line-height: 1.5;
+    text-align: left;
+  }
+
+  /* ===== CONTACT ===== */
+  .contact {
+    position: relative;
+    padding: 8rem 0;
+    text-align: center;
+    overflow: hidden;
+    background: var(--bg);
+  }
+
+  .contact-inner {
+    position: relative;
+    z-index: 1;
+  }
+
+  .contact h2 {
+    justify-content: center;
+  }
+
+  .contact h2::before {
+    display: none;
+  }
+
+  .email {
+    display: inline-block;
+    font-size: 2rem;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    margin-bottom: 1rem;
+    transition:
+      filter 0.3s ease,
+      transform 0.3s ease;
+  }
+
+  .email:hover {
+    opacity: 1;
+    transform: scale(1.05);
+    filter: drop-shadow(0 0 20px rgba(45, 212, 191, 0.3));
+  }
+
+  .phone {
+    font-size: 1.5rem;
+    font-weight: 400;
+    color: var(--text);
+    margin-bottom: 6rem;
+    transition:
+      filter 0.3s ease,
+      transform 0.3s ease;
+  }
+
+  .phone:hover {
+    opacity: 1;
+    transform: scale(1.05);
+    filter: drop-shadow(0 0 20px rgba(45, 212, 191, 0.3));
+  }
+
+  .phone-block {
+    display: block;
+  }
+
+  .social-links {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+  }
+
+  .social-links a {
+    color: var(--text-dim);
+    transition:
+      color 0.3s ease,
+      transform 0.3s ease;
+  }
+
+  .social-links a:hover {
+    color: var(--accent);
+    opacity: 1;
+    transform: translateY(-3px);
+  }
+
+  .cta-red {
+    color: red;
+  }
+
+  h2.cta-red::before {
+    content: "";
+    display: block;
+    width: 2rem;
+    height: 1px;
+    background: red;
+  }
+
+  /* ===== RESPONSIVE ===== */
+  @media (max-width: 768px) {
+    h1 {
+      font-size: 2.75rem;
+    }
+
+    .tagline {
+      font-size: 1rem;
+    }
+
+    .hero-glow {
+      width: 450px;
+      height: 350px;
+    }
+
+    .services {
+      padding: 5rem 0;
+    }
+
+    .services-grid {
+      grid-template-columns: 1fr;
+    }
+
+    .service-card {
+      padding: 2rem;
+    }
+
+    .banner p {
+      font-size: 1.1rem;
+    }
+
+    .before-after,
+    .work,
+    .warning {
+      padding: 5rem 0;
+    }
+
+    .warning-grid {
+      grid-template-columns: 1fr;
+    }
+
+    .warning-lead {
+      font-size: 1rem;
+    }
+
+    .email {
+      font-size: 1.25rem;
+    }
+
+    .contact {
+      padding: 5rem 0;
+    }
+  }
+
+  @media (min-width: 769px) and (max-width: 1024px) {
+    h1 {
+      font-size: 3.5rem;
+    }
+  }
+</style>
