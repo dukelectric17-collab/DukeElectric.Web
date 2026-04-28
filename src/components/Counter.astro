@@ -1,0 +1,100 @@
+---
+interface Props {
+  target: number;
+  label: string;
+  suffix?: string;
+}
+
+const { target, label, suffix = '+' } = Astro.props;
+---
+
+<div class="counter" data-target={target}>
+  <span class="counter-value">0</span><span class="counter-suffix">{suffix}</span>
+  <span class="counter-label">{label}</span>
+</div>
+
+<style>
+  .counter {
+    text-align: center;
+  }
+
+  .counter-value {
+    font-size: 3.5rem;
+    font-weight: 800;
+    letter-spacing: -0.03em;
+    background: linear-gradient(180deg, var(--accent) 0%, rgba(45, 212, 191, 0.6) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .counter-suffix {
+    font-size: 3.5rem;
+    font-weight: 800;
+    background: linear-gradient(180deg, var(--accent) 0%, rgba(45, 212, 191, 0.6) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .counter-label {
+    display: block;
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    margin-top: 0.5rem;
+  }
+
+  @media (max-width: 768px) {
+    .counter-value,
+    .counter-suffix {
+      font-size: 2.5rem;
+    }
+  }
+</style>
+
+<script>
+  function animateCounters() {
+    const counters = document.querySelectorAll<HTMLElement>('.counter');
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        for (const entry of entries) {
+          if (!entry.isIntersecting) continue;
+
+          const el = entry.target as HTMLElement;
+          const valueEl = el.querySelector('.counter-value')!;
+          const target = parseInt(el.dataset.target || '0', 10);
+          const duration = 2000;
+          const start = performance.now();
+
+          function update(now: number) {
+            const elapsed = now - start;
+            const progress = Math.min(elapsed / duration, 1);
+            const eased = 1 - Math.pow(1 - progress, 3);
+            const current = Math.floor(eased * target);
+
+            valueEl.textContent = current.toLocaleString();
+
+            if (progress < 1) {
+              requestAnimationFrame(update);
+            } else {
+              valueEl.textContent = target.toLocaleString();
+            }
+          }
+
+          requestAnimationFrame(update);
+          observer.unobserve(el);
+        }
+      },
+      { threshold: 0.5 }
+    );
+
+    for (const counter of counters) {
+      observer.observe(counter);
+    }
+  }
+
+  animateCounters();
+</script>

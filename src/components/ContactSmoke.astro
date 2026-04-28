@@ -1,0 +1,103 @@
+---
+
+---
+
+<canvas id="contact-smoke" class="contact-smoke"></canvas>
+
+<style>
+  .contact-smoke {
+    position: absolute;
+    top: -20%;
+    left: -20%;
+    width: 140%;
+    height: 140%;
+    pointer-events: none;
+    z-index: 0;
+  }
+</style>
+
+<script>
+  const canvas = document.getElementById('contact-smoke') as HTMLCanvasElement;
+  const ctx = canvas.getContext('2d')!;
+
+  interface Wisp {
+    x: number;
+    y: number;
+    r: number;
+    vx: number;
+    vy: number;
+    opacity: number;
+    targetOpacity: number;
+    decay: number;
+    color: string;
+  }
+
+  let wisps: Wisp[] = [];
+
+  function resize() {
+    const rect = canvas.parentElement!.getBoundingClientRect();
+    canvas.width = rect.width * 1.4;
+    canvas.height = rect.height * 1.4;
+  }
+
+  function spawnWisp() {
+    const colors = [
+      'rgba(45, 212, 191,',
+      'rgba(245, 158, 11,',
+      'rgba(200, 200, 200,',
+    ];
+    const color = colors[Math.floor(Math.random() * colors.length)];
+
+    wisps.push({
+      x: canvas.width * (0.35 + Math.random() * 0.3),
+      y: canvas.height * (0.3 + Math.random() * 0.4),
+      r: 15 + Math.random() * 40,
+      vx: (Math.random() - 0.5) * 0.3,
+      vy: -0.15 - Math.random() * 0.3,
+      opacity: 0,
+      targetOpacity: 0.065 + Math.random() * 0.1,
+      decay: 0.0004 + Math.random() * 0.0006,
+      color,
+    });
+  }
+
+  function draw() {
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+    for (let i = wisps.length - 1; i >= 0; i--) {
+      const w = wisps[i];
+      w.x += w.vx;
+      w.y += w.vy;
+      w.r += 0.1;
+      if (w.targetOpacity > 0) {
+        w.opacity = Math.min(w.opacity + 0.01, w.targetOpacity);
+        if (w.opacity >= w.targetOpacity) w.targetOpacity = -1;
+      } else {
+        w.opacity -= w.decay;
+      }
+
+      if (w.opacity <= 0) {
+        wisps.splice(i, 1);
+        continue;
+      }
+
+      ctx.beginPath();
+      const gradient = ctx.createRadialGradient(w.x, w.y, 0, w.x, w.y, w.r);
+      gradient.addColorStop(0, `${w.color} ${w.opacity})`);
+      gradient.addColorStop(1, `${w.color} 0)`);
+      ctx.fillStyle = gradient;
+      ctx.arc(w.x, w.y, w.r, 0, Math.PI * 2);
+      ctx.fill();
+    }
+
+    if (Math.random() < 0.1) spawnWisp();
+
+    requestAnimationFrame(draw);
+  }
+
+  resize();
+  for (let i = 0; i < 5; i++) spawnWisp();
+  draw();
+
+  window.addEventListener('resize', resize);
+</script>
