@@ -15,6 +15,7 @@ const { title, description } = Astro.props;
     <meta charset="utf-8" />
     <Analytics />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="format-detection" content="telephone=no" />
     <title>{title}</title>
     <meta name="description" content={description} />
     <meta name="author" content="Duke Electric" />
@@ -22,15 +23,15 @@ const { title, description } = Astro.props;
       name="keywords"
       content="Duke Electric, electrician Bakersfield, Bakersfield electrician, emergency electrician Bakersfield, 24/7 electrician, panel upgrades Bakersfield, electrical panel replacement, electrical repairs, electrical troubleshooting, residential electrician, commercial electrician, licensed electrician, Kern County electrician, California electrician, breaker repair, electrical service"
     />
-    <link rel="canonical" href="https://duke-electrical.com" />
+    <link rel="canonical" href="https://www.duke-electrical.com" />
 
     <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://duke-electrical.com" />
+    <meta property="og:url" content="https://www.duke-electrical.com" />
     <meta property="og:title" content={title} />
     <meta property="og:description" content={description} />
     <meta
       property="og:image"
-      content="https://duke-electrical.com/images/og-image.jpg"
+      content="https://www.duke-electrical.com/images/og-image.jpg"
     />
 
     <meta name="twitter:card" content="summary_large_image" />
@@ -38,7 +39,7 @@ const { title, description } = Astro.props;
     <meta name="twitter:description" content={description} />
     <meta
       name="twitter:image"
-      content="https://duke-electrical.com/images/og-image.jpg"
+      content="https://www.duke-electrical.com/images/og-image.jpg"
     />
 
     <link rel="icon" type="image/png" href="/favicon-96x96.png" sizes="96x96" />
@@ -61,11 +62,11 @@ const { title, description } = Astro.props;
         "@context": "https://schema.org",
         "@type": "Electrician",
         name: "Duke Electric",
-        url: "https://duke-electrical.com",
-        image: "https://duke-electrical.com/images/og-image.jpg",
-        logo: "https://duke-electrical.com/images/logo.svg",
+        url: "https://www.duke-electrical.com",
+        image: "https://www.duke-electrical.com/images/og-image.jpg",
+        logo: "https://www.duke-electrical.com/images/logo.svg",
         telephone: "+1-661-343-5645",
-        email: "dukeelectric17@gmail.com",
+        email: "dukelectric17@gmail.com",
         address: {
           "@type": "PostalAddress",
           streetAddress: "7850 White Ln",
@@ -99,6 +100,11 @@ const { title, description } = Astro.props;
           identifier: "1081132",
         },
         priceRange: "$$",
+        sameAs: [
+          "https://www.instagram.com/dukeselectricalcontracting/",
+          "https://www.yelp.com/biz/duke-electric-bakersfield-4",
+          "https://maps.app.goo.gl/3ovR2BeonioVaYdx9",
+        ],
       })}
     />
   </head>
